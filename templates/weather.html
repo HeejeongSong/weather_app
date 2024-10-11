@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ weather_info.city }} 날씨</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-5">{{ weather_info.city }} 날씨</h1>
+        <ul class="list-group mt-3">
+            <li class="list-group-item"><strong>현재:</strong> {{ weather_info.datetime }}</li>
+            <li class="list-group-item"><strong>기온:</strong> {{ weather_info.temperature }}</li>
+            <li class="list-group-item"><strong>상태:</strong> {{ weather_info.sky }}</li>
+            <li class="list-group-item"><strong>습도:</strong> {{ weather_info.humidity }}</li>
+        </ul>
+        <a href="/" class="btn btn-secondary mt-3">조회화면으로 돌아가기</a>
+    </div>
+</body>
+</html>
+
